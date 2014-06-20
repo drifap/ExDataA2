@@ -15,9 +15,9 @@ plot.Q1 <- tapply(NEI$Emissions/1000000,NEI$year,sum)
 png("plot1.png")                                   # open grapichs device
 
 bp <- barplot(plot.Q1, col=heat.colors(4),               # create hist and set colour
-              ylim=c(0, 8),
+              ylim=c(0, 8),                              # set limits for y axis
               xlab="Year",                               # label X
-              ylab="PM2.5 emission (millions of tons)",             # label y
+              ylab="PM2.5 emission (millions of tons)",  # label y
               main="Total PM2.5 emission per year")      # Annote histagram
 
 text(bp, 2, format(p1$Emissions, digits = 3), xpd=TRUE, col="black") 
