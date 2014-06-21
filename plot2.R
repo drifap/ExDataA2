@@ -1,6 +1,8 @@
-## Plot 2
+### Plot 2
 
-source(file="load_data.R")
+## Load data
+NEI <- readRDS("data/summarySCC_PM25.rds")
+SCC <- readRDS("data/Source_Classification_Code.rds")
 
 ####################### Question 2 ##############################################
 ## Have total emissions from PM2.5 decreased in the Baltimore City, 

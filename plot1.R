@@ -1,6 +1,8 @@
-## plot 1
+### plot 1
 
-source(file="load_data.R")
+## Load data
+NEI <- readRDS("data/summarySCC_PM25.rds")
+SCC <- readRDS("data/Source_Classification_Code.rds")
 
 #################### Question 1 ################################################
 ## Have total emissions from PM2.5 decreased in the United States from 1999 to 2008? 

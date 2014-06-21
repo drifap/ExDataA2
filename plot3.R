@@ -1,6 +1,10 @@
-## Plot 3
+### Plot 3
 
-source(file="load_data.R")
+## Load data 
+NEI <- readRDS("data/summarySCC_PM25.rds")
+SCC <- readRDS("data/Source_Classification_Code.rds")
+
+## load package
 require(ggplot2)
 
 ######################## Question 3 ############################################
