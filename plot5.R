@@ -45,7 +45,7 @@ colnames(mob_2)[3] <- "Total"                               # name aggregated co
 ## create plot5 
 png("plot5.png", width=600,height=600)                           # open grapichs device
 
-qplot(factor(Year), Total, data=mob_2)+                          # start with qplot
+ggplot(mob_2,aes(factor(Year), Total))+                          # start with qplot
         facet_grid(.~Type)+                                      # set facet so each city has a grid
         geom_bar(aes(fill=Type),stat = "identity")+              # set bar chart 
         guides(fill=F)+                                          # remove legend                    
@@ -56,6 +56,6 @@ qplot(factor(Year), Total, data=mob_2)+                          # start with qp
                   aes(label=format(Total, digits=2)),
                   position = position_dodge(width = 0.8), 
                   vjust=-0.40,
-                  size=3)
+                  size=4)
 
 dev.off()                                                        # close graphics device 

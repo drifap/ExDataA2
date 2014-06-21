@@ -46,7 +46,7 @@ colnames(coal_2)[3] <- "Total"                                   # name aggregat
 png("plot4.png", width=800,height=600)                           # open grapichs device
 
 
-qplot(factor(Year), Total, data=coal_2)+                         # start with qplot
+ggplot(coal_2,aes(factor(Year), Total))+                         # start with plot
         facet_grid(.~Type)+                                      # set facet so each city has a grid
         geom_bar(aes(fill=Type),stat = "identity")+              # set bar chart 
         guides(fill=F)+                                          # remove legend                    
